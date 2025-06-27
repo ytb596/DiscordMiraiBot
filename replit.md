@@ -138,6 +138,8 @@ Changelog:
 - June 27, 2025. Added comprehensive status command with performance metrics
 - June 27, 2025. Updated configuration system to support both environment variables and config.json
 - June 27, 2025. Added flexible configuration with priority: env vars first, then config.json fallback
+- June 27, 2025. Added version and creator (cre) attributes to all commands
+- June 27, 2025. Updated menu and help commands to display version and creator information
 ```
 
 ## User Preferences

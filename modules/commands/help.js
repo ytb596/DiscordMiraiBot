@@ -5,6 +5,8 @@ module.exports = {
     usage: '[tên lệnh]',
     cooldown: 5,
     category: 'Chính',
+    version: '1.8.0',
+    cre: 'MiraiDev',
 
     async execute(client, message, args) {
         const { commands } = client;
@@ -96,6 +98,22 @@ module.exports = {
             embed.fields.push({
                 name: '⏰ Thời gian chờ',
                 value: `${command.cooldown} giây`,
+                inline: true
+            });
+        }
+
+        if (command.version) {
+            embed.fields.push({
+                name: '🔖 Phiên bản',
+                value: command.version,
+                inline: true
+            });
+        }
+
+        if (command.cre) {
+            embed.fields.push({
+                name: '👨‍💻 Người tạo',
+                value: command.cre,
                 inline: true
             });
         }

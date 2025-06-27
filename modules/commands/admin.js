@@ -6,6 +6,8 @@ module.exports = {
     cooldown: 5,
     category: 'Hệ thống',
     ownerOnly: true,
+    version: '2.5.0',
+    cre: 'MiraiCore',
 
     async execute(client, message, args) {
         const config = require('../../config');

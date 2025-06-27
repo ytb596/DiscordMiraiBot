@@ -4,6 +4,8 @@ module.exports = {
     aliases: ['info', 'stats', 'botinfo', 'trangthai'],
     cooldown: 5,
     category: 'Chính',
+    version: '2.0.0',
+    cre: 'MiraiCore',
 
     async execute(client, message, args) {
         const permissions = require('../../utility/permissions');

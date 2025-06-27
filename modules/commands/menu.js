@@ -5,6 +5,8 @@ module.exports = {
     usage: '[all|tên_lệnh]',
     cooldown: 3,
     category: 'Chính',
+    version: '2.1.0',
+    cre: 'MiraiDev',
 
     async execute(client, message, args) {
         const { commands } = client;
@@ -196,16 +198,25 @@ module.exports = {
         }
 
         if (command.ownerOnly) {
-            advancedInfo.push(`**Access:** Owner Only`);
+            advancedInfo.push(`**Quyền truy cập:** Chỉ Owner`);
         }
 
         if (command.permissions && command.permissions.length) {
-            advancedInfo.push(`**Permissions:** ${command.permissions.join(', ')}`);
+            advancedInfo.push(`**Quyền hạn:** ${command.permissions.join(', ')}`);
+        }
+
+        // Add version and creator info
+        if (command.version) {
+            advancedInfo.push(`**Phiên bản:** ${command.version}`);
+        }
+
+        if (command.cre) {
+            advancedInfo.push(`**Người tạo:** ${command.cre}`);
         }
 
         if (advancedInfo.length > 0) {
             embed.fields.push({
-                name: '⚙️ Advanced Info',
+                name: '⚙️ Thông tin chi tiết',
                 value: advancedInfo.join('\n'),
                 inline: false
             });

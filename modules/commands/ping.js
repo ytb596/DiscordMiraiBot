@@ -4,6 +4,8 @@ module.exports = {
     aliases: ['delay', 'pong', 'dotrem'],
     cooldown: 3,
     category: 'Chính',
+    version: '1.5.0',
+    cre: 'MiraiDev',
 
     async execute(client, message, args) {
         const sent = await message.reply('🏓 Đang kiểm tra...');

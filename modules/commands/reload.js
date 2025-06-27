@@ -8,6 +8,8 @@ module.exports = {
     cooldown: 5,
     category: 'Hệ thống',
     ownerOnly: true,
+    version: '1.3.0',
+    cre: 'MiraiCore',
 
     async execute(client, message, args) {
         // Check if user is bot owner
