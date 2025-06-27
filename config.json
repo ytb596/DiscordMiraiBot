@@ -2,6 +2,15 @@
   "token": "your_discord_token_here",
   "prefix": "!",
   "owners": ["your_user_id_here"],
+  "admins": {
+    "main": ["your_user_id_here"],
+    "sub": []
+  },
+  "guilds": {
+    "approved": [],
+    "pending": [],
+    "blacklisted": []
+  },
   "settings": {
     "presence": {
       "status": "online",

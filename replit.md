@@ -130,6 +130,11 @@ Changelog:
 - June 27, 2025. Removed slash commands, using prefix commands only
 - June 27, 2025. Changed from environment variables to config.json
 - June 27, 2025. Added comprehensive menu command with pagination
+- June 27, 2025. Implemented advanced admin system with main/sub admin levels
+- June 27, 2025. Added guild protection system with approve/blacklist/pending
+- June 27, 2025. Created permission manager with multi-level access control
+- June 27, 2025. Enhanced terminal display with large MIRAI logo
+- June 27, 2025. Added comprehensive status command with performance metrics
 ```
 
 ## User Preferences

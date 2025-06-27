@@ -20,18 +20,23 @@ class Mirai {
     }
 
     displayBanner() {
-        const banner = `
+        const logger = require('./utility/logger');
+        logger.banner('MIRAI Bot', '2.0.0');
+        
+        const statusBanner = `
 ╔══════════════════════════════════════════════════════════════╗
-║                          MIRAI BOT                           ║
-║                    Discord Bot Manager                       ║
+║                    🚀 SYSTEM INITIALIZED                     ║
 ║                                                              ║
-║  🚀 Hot Reload System Active                                 ║
-║  📁 Commands Auto-Discovery                                  ║
-║  🎨 Beautiful Terminal Logs                                  ║
-║  ⚡ Ready for Action!                                        ║
+║  ✅ Hot Reload System Active                                 ║
+║  ✅ Commands Auto-Discovery                                  ║
+║  ✅ Beautiful Terminal Logs                                  ║
+║  ✅ Advanced Admin System                                    ║
+║  ✅ Guild Protection Active                                  ║
+║  ✅ Multi-Level Permissions                                  ║
+║  ⚡ Ready for Premium Operations!                            ║
 ╚══════════════════════════════════════════════════════════════╝
         `;
-        console.log('\x1b[36m%s\x1b[0m', banner);
+        console.log('\x1b[36m%s\x1b[0m', statusBanner);
     }
 
     async loadCommands() {
