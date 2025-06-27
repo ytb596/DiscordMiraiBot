@@ -126,7 +126,10 @@ MIRAI is a modern Discord bot built with Node.js and discord.js v14, featuring a
 
 ```
 Changelog:
-- June 27, 2025. Initial setup
+- June 27, 2025. Initial setup with hot reload system
+- June 27, 2025. Removed slash commands, using prefix commands only
+- June 27, 2025. Changed from environment variables to config.json
+- June 27, 2025. Added comprehensive menu command with pagination
 ```
 
 ## User Preferences
