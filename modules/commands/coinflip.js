@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['coin', 'flip', 'tungxu'],
     cooldown: 2,
     category: 'Giải trí',
-    version: '1.0.0',
+    version: '1.1.0',
     cre: 'MiraiDev',
 
     async execute(client, message, args) {

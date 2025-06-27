@@ -6,7 +6,7 @@ module.exports = {
     usage: '<câu hỏi>',
     cooldown: 3,
     category: 'Giải trí',
-    version: '1.0.0',
+    version: '1.2.0',
     cre: 'MiraiDev',
 
     async execute(client, message, args) {

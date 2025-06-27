@@ -6,7 +6,7 @@ module.exports = {
     usage: '<biểu_thức_toán_học>',
     cooldown: 3,
     category: 'Tiện ích',
-    version: '1.0.0',
+    version: '1.3.0',
     cre: 'MiraiDev',
 
     async execute(client, message, args) {
