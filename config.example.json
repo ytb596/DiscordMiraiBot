@@ -1,0 +1,17 @@
+{
+    "token": "your_discord_token_here",
+    "prefix": "!",
+    "owners": ["your_user_id_here"],
+    "mainAdmins": [],
+    "subAdmins": [],
+    "approvedGuilds": [],
+    "pendingGuilds": [],
+    "blacklistedGuilds": [],
+    "presence": {
+        "status": "online",
+        "activity": {
+            "name": "!menu | MIRAI Bot",
+            "type": "PLAYING"
+        }
+    }
+}

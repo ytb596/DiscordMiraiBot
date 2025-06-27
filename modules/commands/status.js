@@ -1,9 +1,9 @@
 module.exports = {
     name: 'status',
-    description: 'Display comprehensive bot status, statistics, and system information',
-    aliases: ['info', 'stats', 'botinfo'],
+    description: 'Hiển thị trạng thái bot, thống kê và thông tin hệ thống toàn diện',
+    aliases: ['info', 'stats', 'botinfo', 'trangthai'],
     cooldown: 5,
-    category: 'General',
+    category: 'Chính',
 
     async execute(client, message, args) {
         const permissions = require('../../utility/permissions');

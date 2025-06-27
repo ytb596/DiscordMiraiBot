@@ -2,11 +2,11 @@ const mirai = require('../../mirai');
 
 module.exports = {
     name: 'reload',
-    description: 'Reload all commands or a specific command',
-    aliases: ['r'],
-    usage: '[command name]',
+    description: 'Tải lại tất cả lệnh hoặc một lệnh cụ thể',
+    aliases: ['r', 'tailai'],
+    usage: '[tên lệnh]',
     cooldown: 5,
-    category: 'System',
+    category: 'Hệ thống',
     ownerOnly: true,
 
     async execute(client, message, args) {

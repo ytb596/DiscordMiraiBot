@@ -53,12 +53,13 @@ MIRAI is a modern Discord bot built with Node.js and discord.js v14, featuring a
   - Structured data support
 
 ### 5. Configuration System (`config.js`)
-- **Purpose**: Centralized configuration management
+- **Purpose**: Flexible configuration management with dual support
 - **Features**:
-  - Environment variable integration
+  - Priority-based loading: Environment variables first, then config.json fallback
+  - Complete configuration via environment variables or JSON file
   - Guild-specific settings support
   - Bot presence configuration
-  - Owner permissions management
+  - Owner and admin permissions management
 
 ## Data Flow
 
@@ -135,6 +136,8 @@ Changelog:
 - June 27, 2025. Created permission manager with multi-level access control
 - June 27, 2025. Enhanced terminal display with large MIRAI logo
 - June 27, 2025. Added comprehensive status command with performance metrics
+- June 27, 2025. Updated configuration system to support both environment variables and config.json
+- June 27, 2025. Added flexible configuration with priority: env vars first, then config.json fallback
 ```
 
 ## User Preferences

@@ -1,10 +1,10 @@
 module.exports = {
     name: 'admin',
-    description: 'Admin management commands - manage main/sub admins and guild permissions',
-    aliases: ['adm'],
+    description: 'Lệnh quản lý admin - quản lý admin chính/phụ và quyền máy chủ',
+    aliases: ['adm', 'quantri'],
     usage: '<add|remove|list|guild> [main|sub] [user_id]',
     cooldown: 5,
-    category: 'System',
+    category: 'Hệ thống',
     ownerOnly: true,
 
     async execute(client, message, args) {

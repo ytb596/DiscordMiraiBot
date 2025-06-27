@@ -63,16 +63,16 @@ client.on('messageCreate', async (message) => {
         
         // Block usage in blacklisted guilds
         if (permissions.isGuildBlacklisted(guildId)) {
-            return message.reply('🚫 This server has been blacklisted from using MIRAI Bot.');
+            return message.reply('🚫 Máy chủ này đã bị cấm sử dụng MIRAI Bot.');
         }
         
         // Check if user can use bot in this guild
         if (!permissions.canUseInGuild(userId, guildId)) {
             const guildStatus = permissions.getGuildStatus(guildId);
             if (guildStatus === 'Pending') {
-                return message.reply('⏳ This server is pending approval. Only admins can use the bot currently.\n\nServer administrators can contact the bot owner for approval.');
+                return message.reply('⏳ Máy chủ này đang chờ phê duyệt. Hiện tại chỉ admin mới có thể sử dụng bot.\n\nQuản trị viên máy chủ có thể liên hệ chủ sở hữu bot để được phê duyệt.');
             } else {
-                return message.reply('❌ This server is not authorized to use MIRAI Bot.\n\nPlease contact the bot administrator for access.');
+                return message.reply('❌ Máy chủ này chưa được ủy quyền sử dụng MIRAI Bot.\n\nVui lòng liên hệ quản trị viên bot để được cấp quyền truy cập.');
             }
         }
     }
@@ -90,7 +90,7 @@ client.on('messageCreate', async (message) => {
         await require('./utility/Handle_Command').execute(client, message, command, args);
     } catch (error) {
         logger.error(`Error executing command ${commandName}:`, error);
-        message.reply('❌ An error occurred while executing this command!');
+        message.reply('❌ Đã xảy ra lỗi khi thực hiện lệnh này!');
     }
 });
 
@@ -112,7 +112,7 @@ process.on('uncaughtException', (error) => {
 
 // Login to Discord
 if (!config.token || config.token === 'your_discord_token_here') {
-    logger.error('No Discord token provided! Please add your token to config.js');
+    logger.error('Chưa cung cấp Discord token! Vui lòng thêm DISCORD_TOKEN vào environment variables hoặc config.json');
     process.exit(1);
 }
 

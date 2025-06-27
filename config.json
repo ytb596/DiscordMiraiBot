@@ -37,42 +37,42 @@
   },
   "categories": {
     "general": {
-      "name": "General",
+      "name": "Chính",
       "emoji": "📚",
-      "description": "Basic bot commands"
+      "description": "Các lệnh cơ bản của bot"
     },
     "utility": {
-      "name": "Utility", 
+      "name": "Tiện ích", 
       "emoji": "🔧",
-      "description": "Useful utility commands"
+      "description": "Các lệnh tiện ích hữu ích"
     },
     "system": {
-      "name": "System",
+      "name": "Hệ thống",
       "emoji": "⚙️",
-      "description": "System and admin commands"
+      "description": "Lệnh hệ thống và quản trị"
     },
     "fun": {
-      "name": "Fun",
+      "name": "Giải trí",
       "emoji": "🎉", 
-      "description": "Entertainment commands"
+      "description": "Lệnh giải trí"
     }
   },
   "messages": {
     "errors": {
-      "noPermission": "❌ You don't have permission to use this command!",
-      "cooldown": "⏰ Please wait {time} more seconds before using this command again.",
-      "commandNotFound": "❌ Command not found! Use `{prefix}help` to see available commands.",
-      "missingArgs": "❌ Missing required arguments! Usage: `{usage}`",
-      "botPermissions": "❌ I don't have the required permissions to execute this command!",
-      "ownerOnly": "❌ This command is restricted to bot owners only!",
-      "guildOnly": "❌ This command can only be used in servers!",
-      "dmOnly": "❌ This command can only be used in direct messages!",
-      "genericError": "❌ An error occurred while executing this command!"
+      "noPermission": "❌ Bạn không có quyền sử dụng lệnh này!",
+      "cooldown": "⏰ Vui lòng đợi thêm {time} giây trước khi sử dụng lại lệnh này.",
+      "commandNotFound": "❌ Không tìm thấy lệnh! Dùng `{prefix}help` để xem danh sách lệnh.",
+      "missingArgs": "❌ Thiếu tham số bắt buộc! Cách dùng: `{usage}`",
+      "botPermissions": "❌ Bot không có đủ quyền để thực hiện lệnh này!",
+      "ownerOnly": "❌ Lệnh này chỉ dành cho chủ sở hữu bot!",
+      "guildOnly": "❌ Lệnh này chỉ có thể sử dụng trong máy chủ!",
+      "dmOnly": "❌ Lệnh này chỉ có thể sử dụng trong tin nhắn riêng!",
+      "genericError": "❌ Đã xảy ra lỗi khi thực hiện lệnh này!"
     },
     "success": {
-      "commandExecuted": "✅ Command executed successfully!",
-      "settingsUpdated": "✅ Settings updated successfully!",
-      "reloaded": "✅ Successfully reloaded!"
+      "commandExecuted": "✅ Lệnh đã được thực hiện thành công!",
+      "settingsUpdated": "✅ Cài đặt đã được cập nhật thành công!",
+      "reloaded": "✅ Tải lại thành công!"
     }
   },
   "development": {

@@ -1,11 +1,12 @@
 module.exports = {
     name: 'ping',
-    description: 'Check bot latency and response time',
-    aliases: ['latency', 'pong'],
+    description: 'Kiểm tra độ trễ và thời gian phản hồi của bot',
+    aliases: ['delay', 'pong', 'dotrem'],
     cooldown: 3,
+    category: 'Chính',
 
     async execute(client, message, args) {
-        const sent = await message.reply('🏓 Pinging...');
+        const sent = await message.reply('🏓 Đang kiểm tra...');
         const timeDiff = sent.createdTimestamp - message.createdTimestamp;
         const wsLatency = client.ws.ping;
 
@@ -14,24 +15,24 @@ module.exports = {
             title: '🏓 Pong!',
             fields: [
                 {
-                    name: '📨 Message Latency',
+                    name: '📨 Độ trễ tin nhắn',
                     value: `${timeDiff}ms`,
                     inline: true
                 },
                 {
-                    name: '💓 WebSocket Latency',
+                    name: '💓 Độ trễ WebSocket',
                     value: `${wsLatency}ms`,
                     inline: true
                 },
                 {
-                    name: '⏱️ Response Quality',
+                    name: '⏱️ Chất lượng kết nối',
                     value: this.getLatencyQuality(Math.max(timeDiff, wsLatency)),
                     inline: true
                 }
             ],
             timestamp: new Date(),
             footer: {
-                text: 'Mirai Bot • Ping Command'
+                text: 'MIRAI Bot • Lệnh Ping'
             }
         };
 
@@ -41,9 +42,9 @@ module.exports = {
 
 
     getLatencyQuality(latency) {
-        if (latency < 100) return '🟢 Excellent';
-        if (latency < 200) return '🟡 Good';
-        if (latency < 500) return '🟠 Fair';
-        return '🔴 Poor';
+        if (latency < 100) return '🟢 Xuất sắc';
+        if (latency < 200) return '🟡 Tốt';
+        if (latency < 500) return '🟠 Khá';
+        return '🔴 Kém';
     }
 };

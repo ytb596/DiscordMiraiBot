@@ -1,10 +1,10 @@
 module.exports = {
     name: 'menu',
-    description: 'Display bot menu with command list and detailed information',
-    aliases: ['m', 'commands'],
-    usage: '[all|command_name]',
+    description: 'Hiển thị menu bot với danh sách lệnh và thông tin chi tiết',
+    aliases: ['m', 'danhsach', 'ds'],
+    usage: '[all|tên_lệnh]',
     cooldown: 3,
-    category: 'General',
+    category: 'Chính',
 
     async execute(client, message, args) {
         const { commands } = client;
@@ -24,7 +24,7 @@ module.exports = {
             if (command) {
                 return this.sendCommandDetails(message, command, config);
             } else {
-                return message.reply(`❌ Command \`${subCommand}\` not found! Use \`${config.prefix}menu all\` to see all commands.`);
+                return message.reply(`❌ Không tìm thấy lệnh \`${subCommand}\`! Dùng \`${config.prefix}menu all\` để xem tất cả lệnh.`);
             }
         }
     },
@@ -40,12 +40,12 @@ module.exports = {
 
         const embed = {
             color: 0x3498db,
-            title: '📋 MIRAI Bot Menu',
-            description: `Welcome to MIRAI Bot! Here's what I can do for you.`,
+            title: '📋 Menu MIRAI Bot',
+            description: `Chào mừng đến với MIRAI Bot! Đây là những gì tôi có thể làm cho bạn.`,
             fields: [],
             timestamp: new Date(),
             footer: {
-                text: `Use ${config.prefix}menu all to see all commands • ${config.prefix}menu <command> for details`
+                text: `Dùng ${config.prefix}menu all để xem tất cả lệnh • ${config.prefix}menu <lệnh> để xem chi tiết`
             }
         };
 
@@ -63,15 +63,15 @@ module.exports = {
 
         // Add quick stats
         embed.fields.push({
-            name: '📊 Bot Statistics',
-            value: `**Commands:** ${commands.size}\n**Prefix:** ${config.prefix}\n**Status:** Online & Ready`,
+            name: '📊 Thống kê Bot',
+            value: `**Lệnh:** ${commands.size}\n**Tiền tố:** ${config.prefix}\n**Trạng thái:** Online & Sẵn sàng`,
             inline: true
         });
 
         // Add usage info
         embed.fields.push({
-            name: '💡 Quick Help',
-            value: `• \`${config.prefix}menu all\` - Show all commands\n• \`${config.prefix}menu <command>\` - Command details\n• \`${config.prefix}help\` - Alternative help`,
+            name: '💡 Hướng dẫn nhanh',
+            value: `• \`${config.prefix}menu all\` - Hiện tất cả lệnh\n• \`${config.prefix}menu <lệnh>\` - Chi tiết lệnh\n• \`${config.prefix}help\` - Trợ giúp khác`,
             inline: true
         });
 
@@ -90,12 +90,12 @@ module.exports = {
         const embeds = [];
         let currentEmbed = {
             color: 0x2ecc71,
-            title: '📚 All Commands',
-            description: `Complete list of available commands. Use \`${config.prefix}menu <command>\` for details.`,
+            title: '📚 Tất cả lệnh',
+            description: `Danh sách đầy đủ các lệnh có sẵn. Dùng \`${config.prefix}menu <lệnh>\` để xem chi tiết.`,
             fields: [],
             timestamp: new Date(),
             footer: {
-                text: `Page 1 • Total Commands: ${commands.size}`
+                text: `Trang 1 • Tổng số lệnh: ${commands.size}`
             }
         };
 
@@ -108,11 +108,11 @@ module.exports = {
                 embeds.push(currentEmbed);
                 currentEmbed = {
                     color: 0x2ecc71,
-                    title: '📚 All Commands (Continued)',
+                    title: '📚 Tất cả lệnh (Tiếp theo)',
                     fields: [],
                     timestamp: new Date(),
                     footer: {
-                        text: `Page ${embeds.length + 1} • Total Commands: ${commands.size}`
+                        text: `Trang ${embeds.length + 1} • Tổng số lệnh: ${commands.size}`
                     }
                 };
                 fieldCount = 0;
@@ -153,17 +153,17 @@ module.exports = {
     sendCommandDetails(message, command, config) {
         const embed = {
             color: 0xe74c3c,
-            title: `🔍 Command Details: ${command.name}`,
+            title: `🔍 Chi tiết lệnh: ${command.name}`,
             fields: [
                 {
-                    name: '📄 Description',
-                    value: command.description || 'No description provided',
+                    name: '📄 Mô tả',
+                    value: command.description || 'Không có mô tả',
                     inline: false
                 }
             ],
             timestamp: new Date(),
             footer: {
-                text: 'Mirai Bot • Command Information'
+                text: 'MIRAI Bot • Thông tin lệnh'
             }
         };
 

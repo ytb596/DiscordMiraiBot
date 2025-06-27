@@ -1,9 +1,10 @@
 module.exports = {
     name: 'help',
-    description: 'Display all available commands or get info about a specific command',
-    aliases: ['h', 'commands'],
-    usage: '[command name]',
+    description: 'Hiển thị tất cả lệnh có sẵn hoặc xem thông tin chi tiết về một lệnh',
+    aliases: ['h', 'trogiup', 'lenhh'],
+    usage: '[tên lệnh]',
     cooldown: 5,
+    category: 'Chính',
 
     async execute(client, message, args) {
         const { commands } = client;
@@ -16,7 +17,7 @@ module.exports = {
         const command = commands.get(commandName) || commands.find(c => c.aliases && c.aliases.includes(commandName));
 
         if (!command) {
-            return message.reply(`❌ Command \`${commandName}\` not found!`);
+            return message.reply(`❌ Không tìm thấy lệnh \`${commandName}\`!`);
         }
 
         return this.sendCommandInfo(message, command);
@@ -34,12 +35,12 @@ module.exports = {
 
         const embed = {
             color: 0x3498db,
-            title: '📚 Available Commands',
-            description: `Use \`${config.prefix}help <command>\` for detailed information about a command.`,
+            title: '📚 Lệnh có sẵn',
+            description: `Dùng \`${config.prefix}help <lệnh>\` để xem thông tin chi tiết về một lệnh.`,
             fields: [],
             timestamp: new Date(),
             footer: {
-                text: `Total Commands: ${commands.size} • Prefix: ${config.prefix}`
+                text: `Tổng số lệnh: ${commands.size} • Tiền tố: ${config.prefix}`
             }
         };
 
@@ -61,23 +62,23 @@ module.exports = {
         const config = require('../../config');
         const embed = {
             color: 0x2ecc71,
-            title: `📝 Command: ${command.name}`,
+            title: `📝 Lệnh: ${command.name}`,
             fields: [
                 {
-                    name: '📄 Description',
-                    value: command.description || 'No description provided',
+                    name: '📄 Mô tả',
+                    value: command.description || 'Không có mô tả',
                     inline: false
                 }
             ],
             timestamp: new Date(),
             footer: {
-                text: 'Mirai Bot • Command Help'
+                text: 'MIRAI Bot • Trợ giúp lệnh'
             }
         };
 
         if (command.aliases && command.aliases.length) {
             embed.fields.push({
-                name: '🔗 Aliases',
+                name: '🔗 Tên gọi khác',
                 value: command.aliases.map(alias => `\`${alias}\``).join(', '),
                 inline: true
             });
@@ -85,7 +86,7 @@ module.exports = {
 
         if (command.usage) {
             embed.fields.push({
-                name: '💡 Usage',
+                name: '💡 Cách dùng',
                 value: `\`${config.prefix}${command.name} ${command.usage}\``,
                 inline: true
             });
@@ -93,8 +94,8 @@ module.exports = {
 
         if (command.cooldown) {
             embed.fields.push({
-                name: '⏰ Cooldown',
-                value: `${command.cooldown} seconds`,
+                name: '⏰ Thời gian chờ',
+                value: `${command.cooldown} giây`,
                 inline: true
             });
         }

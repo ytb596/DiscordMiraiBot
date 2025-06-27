@@ -13,5 +13,5 @@
     "discord-api-types": "^0.38.13",
     "discord.js": "^14.21.0"
   },
-  "description": ""
+  "description": "Bot Discord hiện đại với tính năng hot-reload và hệ thống quản lý admin phân cấp được việt hóa hoàn toàn."
 }
