@@ -1,0 +1,75 @@
+{
+  "token": "your_discord_token_here",
+  "prefix": "!",
+  "owners": ["your_user_id_here"],
+  "settings": {
+    "presence": {
+      "status": "online",
+      "activity": {
+        "name": "with hot reload 🔥",
+        "type": "PLAYING"
+      }
+    },
+    "commands": {
+      "defaultCooldown": 3,
+      "maxCooldown": 300,
+      "caseSensitive": false
+    },
+    "cache": {
+      "maxSize": 1000,
+      "defaultTTL": 3600000,
+      "cleanupInterval": 600000
+    },
+    "logging": {
+      "level": "info",
+      "colors": true,
+      "timestamps": true
+    }
+  },
+  "categories": {
+    "general": {
+      "name": "General",
+      "emoji": "📚",
+      "description": "Basic bot commands"
+    },
+    "utility": {
+      "name": "Utility", 
+      "emoji": "🔧",
+      "description": "Useful utility commands"
+    },
+    "system": {
+      "name": "System",
+      "emoji": "⚙️",
+      "description": "System and admin commands"
+    },
+    "fun": {
+      "name": "Fun",
+      "emoji": "🎉", 
+      "description": "Entertainment commands"
+    }
+  },
+  "messages": {
+    "errors": {
+      "noPermission": "❌ You don't have permission to use this command!",
+      "cooldown": "⏰ Please wait {time} more seconds before using this command again.",
+      "commandNotFound": "❌ Command not found! Use `{prefix}help` to see available commands.",
+      "missingArgs": "❌ Missing required arguments! Usage: `{usage}`",
+      "botPermissions": "❌ I don't have the required permissions to execute this command!",
+      "ownerOnly": "❌ This command is restricted to bot owners only!",
+      "guildOnly": "❌ This command can only be used in servers!",
+      "dmOnly": "❌ This command can only be used in direct messages!",
+      "genericError": "❌ An error occurred while executing this command!"
+    },
+    "success": {
+      "commandExecuted": "✅ Command executed successfully!",
+      "settingsUpdated": "✅ Settings updated successfully!",
+      "reloaded": "✅ Successfully reloaded!"
+    }
+  },
+  "development": {
+    "enabled": true,
+    "testGuild": null,
+    "debugMode": false,
+    "hotReload": true
+  }
+}
